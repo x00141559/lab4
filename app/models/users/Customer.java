@@ -23,10 +23,10 @@ public class Customer extends User{
     private String postCode;
     private String creditCard;
 
-
+    @OneToOne(mappedBy="customer", cascade = CascadeType.ALL)
     private Basket basket;
 
-
+@OneToMany(mappedBy="customer", cascade = CascadeType.ALL)
     private List<ShopOrder> orders;
 	
 	public Customer(String email, String role, String name, String password, String street1, String street2, String town, String postCode, String creditCard)

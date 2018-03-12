@@ -17,13 +17,13 @@ public class OrderItem extends Model {
     @Id
     private Long id;
 
-
+    @ManyToOne
     private ShopOrder order;
     
-
+    @ManyToOne
     private Basket basket;
     
-
+    @ManyToOne
     private Product product;
     
     private int quantity;
@@ -108,4 +108,8 @@ public class OrderItem extends Model {
         this.price = price;
     }
 
+    // //Increment quantity
+    // public void increaseQty() {
+    //     quantity += 1;
+    // }
 }

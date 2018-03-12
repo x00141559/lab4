@@ -21,9 +21,10 @@ public class ShopOrder extends Model {
     
     private Date OrderDate;
     
-
+    @OneToMany(mappedBy="order", cascade = CascadeType.ALL)
     private List<OrderItem> items;
 
+    @ManyToOne
     private Customer customer;
 
     // Default constructor
